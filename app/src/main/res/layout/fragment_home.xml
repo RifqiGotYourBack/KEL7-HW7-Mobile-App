@@ -32,11 +32,11 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Main Content Area -->
+    <!-- Saldo Card Area -->
     <androidx.cardview.widget.CardView
         android:id="@+id/balanceCard"
         android:layout_width="0dp"
-        android:layout_height="200dp"
+        android:layout_height="150dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="16dp"
@@ -52,7 +52,7 @@
             android:layout_width="178dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="35dp"
-            android:layout_marginTop="35dp"
+            android:layout_marginTop="30dp"
             android:text="Total Saldo:"
             android:textColor="#555"
             android:textSize="24sp"
@@ -80,21 +80,103 @@
                 tools:layout_editor_absoluteX="16dp"
                 tools:ignore="MissingConstraints" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/toggleButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#2196F3"
+                android:background="?android:attr/selectableItemBackground"
                 android:elevation="2dp"
                 android:layout_marginLeft="10dp"
-                android:paddingStart="12dp"
-                android:paddingEnd="12dp"
-                android:text="Hide"
-                android:textColor="#FFF"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/saldo_visible"
                 app:layout_constraintStart_toEndOf="@+id/balanceValue"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </androidx.cardview.widget.CardView>
 
+    <!-- Skeleton Menus Area -->
+
+    <LinearLayout
+        android:id="@+id/skeletonMenuLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/balanceCard">
+
+        <!-- Skeleton Menu 1 -->
+        <View
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/circle_skeleton" />
+
+        <!-- Skeleton Menu 2 -->
+        <View
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/circle_skeleton" />
+
+        <!-- Skeleton Menu 3 -->
+        <View
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/circle_skeleton" />
+
+        <!-- Skeleton Menu 4 -->
+        <View
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/circle_skeleton" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/skeletonMenuLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="204dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/balanceCard">
+
+        <!-- Skeleton Menu 1 -->
+        <View
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/circle_skeleton" />
+
+        <!-- Skeleton Menu 2 -->
+        <View
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/circle_skeleton" />
+
+        <!-- Skeleton Menu 3 -->
+        <View
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/circle_skeleton" />
+
+        <!-- Skeleton Menu 4 -->
+        <View
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/circle_skeleton" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
